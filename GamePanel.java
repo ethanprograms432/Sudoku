@@ -64,8 +64,25 @@ public class GamePanel extends JPanel implements Runnable {
    
       super.paintComponent(g);
       drawBackground(g);
+      drawSelectedTile(g);
       drawNumbers(g);
       addNewNumbers(g);
+   
+   }
+   
+   public void drawSelectedTile(Graphics g) {
+   
+      if(!tileSelected.equals("")) {
+      
+         int row = Integer.valueOf(tileSelected.substring(0,1));
+            
+         int col = Integer.valueOf(tileSelected.substring(2));
+         
+         g.setColor(Color.green);
+         
+         g.fillRect(100*col,100*row,100,100);
+         
+      }
    
    }
    
@@ -79,9 +96,13 @@ public class GamePanel extends JPanel implements Runnable {
          
          int col = Integer.valueOf(tileSelected.substring(2));
          
-         numbersOnGrid[row][col] = Integer.valueOf(num);
+         if(numbersOnGrid[row][col] == 0) {
          
-         addedNumbers.add(num + "," + row + "," + col);
+            numbersOnGrid[row][col] = Integer.valueOf(num);
+            
+            addedNumbers.add(num + "," + row + "," + col);
+            
+         }
          
          numberSelected = 0;
          tileSelected = "";
@@ -171,7 +192,6 @@ public class GamePanel extends JPanel implements Runnable {
                String info = Integer.toString(numbersOnGrid[i][j]);
                   
                String num = info.substring(0,1);
-                  
                
                if(nM.sudokuSolution[i][j] == numbersOnGrid[i][j]) {
  
@@ -237,6 +257,8 @@ public class GamePanel extends JPanel implements Runnable {
             g.setFont(new Font("TimesRoman",Font.BOLD,25));
             
             g.drawString(num,100*column + 50,100*row + 50);
+            
+            
          
          }
       }

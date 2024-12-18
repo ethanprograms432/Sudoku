@@ -121,7 +121,6 @@ public class NumberManager {
       
       }
       
-      System.out.println("Row 1 complete");
       
       // ROW TWO
       
@@ -235,7 +234,7 @@ public class NumberManager {
         
       
       }
-      System.out.println("Row 2 complete");
+      //("Row 2 complete");
       
       // ROW THREE
       
@@ -350,7 +349,7 @@ public class NumberManager {
       
       }
       
-      System.out.println("Row 3 complete");
+      //("Row 3 complete");
       // ROW FOUR
       
       for (int l = 0; l < 9; l++) {
@@ -464,7 +463,7 @@ public class NumberManager {
       
       }
       
-      System.out.println("Row 4 complete");
+      //("Row 4 complete");
       // ROW FIVE
       
       for (int m = 0; m < 9; m++) {
@@ -578,7 +577,7 @@ public class NumberManager {
       
       }
       
-      System.out.println("Row 5 complete");
+      //("Row 5 complete");
       
       // ROW SIX
       
@@ -695,7 +694,7 @@ public class NumberManager {
       
       }
       
-      System.out.println("Row 6 complete");
+      //("Row 6 complete");
       
       // ROW SEVEN
       
@@ -812,7 +811,7 @@ public class NumberManager {
       
       }
       
-      System.out.println("Row 7 complete");
+      //("Row 7 complete");
       
       // ROW EIGHT
       
@@ -928,7 +927,7 @@ public class NumberManager {
       
       }
       
-      System.out.println("Row 8 complete");
+      //("Row 8 complete");
       
       // ROW NINE
       
@@ -1045,7 +1044,7 @@ public class NumberManager {
       
       }
       
-      System.out.println("Row 9 complete");
+      //("Row 9 complete");
       
       gp.sudokuFinished = true;
       printList();
@@ -1064,10 +1063,10 @@ public class NumberManager {
             System.out.print(sudokuSolution[g][f]);
          
          }
-         System.out.println();
+         //();
       
       }
-      System.out.println();
+      //();
       
    
    }
